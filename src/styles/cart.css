@@ -1,0 +1,132 @@
+.cart{
+    position: relative;
+    top: 6vh;
+    height: 94%;
+    padding: 1rem;
+}
+
+.cart h3{
+    font-size: 1rem;
+    margin: 1rem 0;
+    color: black;
+    font-weight: bold;
+}
+
+.cart-card-container{
+    border: 1px solid rgb(223, 223, 223);
+    font-size: 13px;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+}
+
+.type-delete-container{
+    border-bottom: 1px solid rgb(223, 223, 223);
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+    padding: 10px 14.5px 0 10px;
+}
+
+.cart-p-brand{
+    color: rgb(192, 192, 192);
+    font-weight: bold;
+}
+
+#btn-cart-trash{
+    color: #D93F3F;
+    font-size: 1rem;
+}
+
+.cart-card-top-content{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-card-top-content p:nth-child(1){
+    color: black;
+    font-weight: bold;
+}
+
+.cart-card-top-content p:nth-child(2){
+    border: 1px solid rgb(223, 223, 223);
+    text-align: center;
+    width: 1.5rem;
+    height: fit-content;
+    margin-right: 2.5px;
+}
+
+.cart-card-bottom-content{
+    padding: 0 15px;
+    text-align: right;
+}
+
+.cart-card-bottom-content p{
+    color: black;
+    font-weight: bold;
+}
+
+.cart-card-bottom-content p span{
+    color: rgb(192, 192, 192);
+}
+
+.card-total-container{
+    border-top: 1px solid rgb(223, 223, 223);
+    font-size: 13px;
+    padding: 10px;
+    margin-top: 1.5rem;
+}
+
+.card-total-container p{
+    color: rgb(192, 192, 192);
+    font-size: 15px;
+}
+
+.card-total-container button{
+    background-color: #D93F3F;
+    color: white;
+    padding: 5px;
+    outline: none;
+    border: none;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px){
+    .cart{
+        top: 10vh;
+        height: 90%;
+        padding-top: 1rem;
+    }
+
+    .cart-container{
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .cart-card-container{
+        width: 30%;
+    }
+
+    .card-total-container{
+        margin-top: 4rem;
+        width: 35%;
+    }
+
+    .cart-card-top-content p:nth-child(1):hover{
+        cursor: pointer;
+    }
+
+    #btn-cart-trash:hover{
+        cursor: pointer;
+        color: #ec3131;
+        transition: all 400ms ease;
+    }
+
+    .card-total-container button:hover{
+        cursor: pointer;
+        background-color: #ec3131;
+        transition: all 400ms ease;
+    }    
+}

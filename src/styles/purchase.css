@@ -1,0 +1,70 @@
+.purchase{
+    position: relative;
+    top: 6vh;
+    height: 94%;
+    padding: 1rem;
+}
+
+.purchase h3{
+    font-size: 1rem;
+    margin: 1rem 0;
+    color: black;
+    font-weight: bold;
+}
+
+.purchase-card-container{
+    border: 1px solid rgb(223, 223, 223);
+    font-size: 13px;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+}
+
+.date-container{
+    border-bottom: 1px solid rgb(223, 223, 223);
+    padding: 10px 0 5px 10px;
+    color: black;
+    font-weight: bold;
+}
+
+.purchase-content{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.purchase-price{
+    color: black;
+    font-weight: bold;
+}
+
+.quantity-containet{
+    border: 1px solid rgb(223, 223, 223);
+    height: fit-content;
+    margin: 0 5px;
+    width: 1.8rem;
+    text-align: center;
+}
+
+.p-purchase-navigate:hover{
+    cursor: pointer;
+    transition: all 0.5s;
+    color: black;
+}
+
+@media screen and (min-width: 768px){
+    .purchase{
+        top: 10vh;
+        height: 90%;
+        padding-top: 1rem;
+    }
+
+    .purchase h3{
+        margin: 1rem 0;
+    }
+
+    .purchase-card-container{
+        width: 50%;
+        margin-left: 25%;
+    }
+}
