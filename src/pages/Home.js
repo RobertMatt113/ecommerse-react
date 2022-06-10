@@ -11,10 +11,10 @@ const Home = () => {
     const navigate = useNavigate();
     
     const [search, setSearch] = useState("");
-    const [categories, setCategories] = useState()
+    const [categories, setCategories] = useState();
     const [ showModal, setShowModal ] = useState(false);
 
-    const products = useSelector(state => state.products)
+    const products = useSelector(state => state.products);
 
     useEffect(()=>{
         axios.get('https://ecommerce-api-react.herokuapp.com/api/v1/products/categories')
@@ -51,7 +51,7 @@ const Home = () => {
                         ))
                     }
                 </ul>
-            </div>  
+                </div>  
             }
    
             <div className="products-container">

@@ -63,12 +63,17 @@
 
 .svg-container{
     width: 30%;
-    margin-top: 1rem;
     margin-left: 35%;
 }
 
 .login-mobiile{
     width: 100%;
+}
+
+.logout-container{
+    color: #ec3131;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 @media screen and (min-width: 768px){
@@ -99,5 +104,9 @@
 
     .login-desk{
         width: 100%;
+    }
+
+    .logout-container:hover{
+        cursor: pointer;
     }
 }

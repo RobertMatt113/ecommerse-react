@@ -141,7 +141,7 @@
     text-align: left;
     position: fixed;
     width: 80%;
-    height: 80%;
+    height: 38%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -156,8 +156,8 @@
     outline: none;
     border: none;
     position: absolute;
-    right: 7%;
-    top: 90%;
+    right: 5%;
+    top: 82%;
 }
 
 .btn-close-modal p{
@@ -260,8 +260,8 @@
     }
 
     .filters-container{
-        width: 40%;
-        height: 80%;
+        width: 30%;
+        height: 40%;
     }
 
     .filters-container ul li:hover{
@@ -272,7 +272,7 @@
     }
     
     .btn-close-modal{
-        right: 4%;
+        right: 3%;
     }
 
     .btn-close-modal:hover{

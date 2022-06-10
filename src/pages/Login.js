@@ -17,17 +17,22 @@ const Login = () => {
         .then(res => {
             localStorage.setItem("token", res.data.data.token)
             navigate('/')
-            alert('Sesion iniciada')
+            alert('Starting session')
         }).catch(error => {
             if(error.response.status === 404){
-                alert("Credenciales incorrectas")
+                alert("Nonexistent user")
             }
         })
     };
 
+    const logout = () => {
+        localStorage.setItem("token", "");
+        if(localStorage.setItem("token"))
+        alert("Closing session");
+    }
+
     return (
         <div className='login'>
-
             <div className="login-content">
                 <h3>Welcome! Enter your email and password to continue</h3>
                 <div className="test-data-container">
@@ -54,6 +59,7 @@ const Login = () => {
                         Login
                     </button>
                 </form>
+                <p className='logout-container' onClick={logout}>Log out</p>
             </div>
 
             <div className="svg-container">
@@ -63,7 +69,6 @@ const Login = () => {
             <div className="svg-desk-container">
                 <img className='login-desk' src={loginDesk} alt="" />
             </div>
-            
         </div>
     );
 };
