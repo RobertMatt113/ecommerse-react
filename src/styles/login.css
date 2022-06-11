@@ -70,9 +70,20 @@
     width: 100%;
 }
 
-.logout-container{
-    color: #ec3131;
-    font-size: 15px;
+.logout-and-creat-container{
+    font-size: 11px;
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logout-and-creat-container p span{
+    color: rgb(87, 214, 214);
+}
+
+.bx-log-out-circle{
+    color: #D93F3F;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -107,6 +118,14 @@
     }
 
     .logout-container:hover{
+        cursor: pointer;
+    }
+
+    .logout-and-creat-container i:hover{
+        cursor: pointer;
+    }
+
+    .logout-and-creat-container p span:hover{
         cursor: pointer;
     }
 }

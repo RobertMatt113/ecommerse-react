@@ -16,6 +16,22 @@ const Cart = () => {
         dispatch(getCart());
     },[dispatch]);
 
+    let total = 0;
+
+    if(myCart?.length > 0){
+        if(myCart?.length > 1){
+            total = myCart?.reduce((initial, current) => {
+                if(typeof initial === 'number'){
+                    return initial + (current.price * current.productsInCart?.quantity)
+                } else {
+                    return (initial.price * initial.productsInCart?.quantity)  +  (current.price * current.productsInCart?.quantity)
+                }
+            });
+        } else {
+            total = myCart?.[0].price * myCart?.[0].productsInCart?.quantity
+        }
+    }
+
     return (
         <div className='cart'>
             <div className="top-details">
@@ -37,14 +53,14 @@ const Cart = () => {
                                 <p>{cartProduct.productsInCart.quantity}</p>
                             </div>
                             <div className="cart-card-bottom-content">
-                                <p><span>Total: </span>{cartProduct.price}</p>
+                                <p><span>Total: </span>${cartProduct.price * cartProduct.productsInCart?.quantity}</p>
                             </div>
                         </div>
                     ))
                 }
             </div>
             <div className="card-total-container">
-                    <p>Total: </p>
+                    <p>Total: <span>${total}</span></p>
                     <button onClick={()=>dispatch(buy())}>
                         Checkout
                     </button>

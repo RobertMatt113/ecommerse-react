@@ -32,7 +32,7 @@ export const addToCart = (productAdded) => (dispatch) => {
         })
         .catch(error => {
             console.log(error.response)
-            alert("Theres an error");
+            alert("This product is currently not avilable");
         })
         .finally(() => dispatch(setIsLoading(false)));
 }
@@ -43,6 +43,7 @@ export const buy = () => (dispatch) => {
         .then(() => {
             dispatch(getPurchase());
             dispatch(setCart([]));
+            alert("Payment made successfully")
         })
         .finally(() => dispatch(setIsLoading(false)));
 }

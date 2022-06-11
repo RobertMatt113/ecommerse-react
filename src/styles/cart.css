@@ -82,6 +82,11 @@
     font-size: 15px;
 }
 
+.card-total-container p span{
+    color: black;
+    font-weight: bold;
+}
+
 .card-total-container button{
     background-color: #D93F3F;
     color: white;

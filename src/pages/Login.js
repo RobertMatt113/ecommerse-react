@@ -27,8 +27,13 @@ const Login = () => {
 
     const logout = () => {
         localStorage.setItem("token", "");
-        if(localStorage.setItem("token"))
         alert("Closing session");
+        navigate('/')
+        if(localStorage.setItem("token"));     
+    }
+
+    const signUp = () => {
+        alert("This function is currently disabled")
     }
 
     return (
@@ -59,7 +64,10 @@ const Login = () => {
                         Login
                     </button>
                 </form>
-                <p className='logout-container' onClick={logout}>Log out</p>
+                <div className="logout-and-creat-container">
+                    <p>Do not have an account? <span onClick={signUp}>Sign up</span></p>
+                    <i onClick={logout} class='bx bx-log-out-circle'></i>
+                </div>
             </div>
 
             <div className="svg-container">

@@ -61,7 +61,7 @@ const Home = () => {
                 </ul>
                 </div>  
             }
-   
+            
             <div className="products-container">
                 <div className="input-container">
                     <input className='search-input'

@@ -80,13 +80,17 @@
 
 .price-contador{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
-.price-contador p{
-    font-size: .9rem;
+.price-contador input{
     color: black;
+    text-align: center;
+    font-size: .9rem;
     font-weight: bold;
+    outline: none;
+    border: none;
+    width: 1.5rem;
 }
 
 .price-contador button{

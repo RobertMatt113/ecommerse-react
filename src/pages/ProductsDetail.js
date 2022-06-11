@@ -9,6 +9,7 @@ import '../styles/products-detail.css'
 const ProductsDetail = () => {
 
     const [product, setProduct] = useState({});
+    const [detailQuantity, setDetailQuantity] = useState(1);
 
     const {id} = useParams();
     const dispatch = useDispatch();
@@ -28,9 +29,19 @@ const ProductsDetail = () => {
     const addCart = () => {
         const productAdded = {
             "id": id,
-            "quantity": 1
+            "quantity": detailQuantity
         }        
-        dispatch(addToCart(productAdded))
+        dispatch(addToCart(productAdded));
+    }
+
+    const increment = () => {
+        setDetailQuantity(detailQuantity + 1);
+    }
+
+    const decrement = () => {
+        if(detailQuantity > 1){
+            setDetailQuantity(detailQuantity - 1);
+        }
     }
 
     return (
@@ -56,9 +67,13 @@ const ProductsDetail = () => {
                         <div className="quantity-container">
                             Quantity
                             <div className="price-contador">
-                                <button>-</button>
-                                <p> 1 </p>
-                                <button>+</button>
+                                <button disabled={detailQuantity === 1} onClick={decrement}>-</button>
+                                <input 
+                                type="text" 
+                                value={detailQuantity}
+                                onChange={e => setDetailQuantity(e.target.value)}
+                                />
+                                <button disabled={detailQuantity === 6} onClick={increment}>+</button>
                             </div>
                         </div>
                     </div>
