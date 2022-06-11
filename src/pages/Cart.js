@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { buy, getCart } from '../store/slices/cart.slice';
+import { buy, getCart, removeFromCart } from '../store/slices/cart.slice';
 import '../styles/cart.css'
 
 const Cart = () => {
@@ -30,7 +30,7 @@ const Cart = () => {
                         <div className='cart-card-container' key={cartProduct.id}>
                             <div className="type-delete-container">
                                 <p className='cart-p-brand'>{cartProduct.brand}</p>
-                                <i id='btn-cart-trash' className='bx bx-trash'></i>
+                                <i onClick={() => dispatch(removeFromCart(cartProduct.id))} id='btn-cart-trash' className='bx bx-trash'></i>
                             </div>
                             <div className="cart-card-top-content">
                                 <p onClick={()=>navigate(`/product/${cartProduct.id}`)}>{cartProduct.title}</p>

@@ -47,4 +47,13 @@ export const buy = () => (dispatch) => {
         .finally(() => dispatch(setIsLoading(false)));
 }
 
+export const removeFromCart = productId => {
+    return dispatch => {
+        dispatch(setIsLoading(true));
+        return axios.delete(`https://ecommerce-api-react.herokuapp.com/api/v1/cart/${productId}`, getConfig())
+            .then(() => dispatch(getCart()))
+            .finally(() => setIsLoading(false));
+    }
+}
+
 export default cartSlice.reducer;

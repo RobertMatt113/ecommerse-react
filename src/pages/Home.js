@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { addToCart } from '../store/slices/cart.slice';
 import {filterCategory, filterHeadLine, getProducts } from '../store/slices/products.slice'
 import '../styles/home.css'
 
@@ -35,6 +36,13 @@ const Home = () => {
 
     const closeModal = () => setShowModal(false);
 
+    const addingCart = id => {
+        const homeProduct = {
+            id: id,
+            quantity: 1
+        }
+        dispatch(addToCart(homeProduct))
+    }
 
     return (
         <div className='home'>
@@ -86,8 +94,8 @@ const Home = () => {
                                         <p>${product.price}</p>
                                     </div>
                                 </div>
-
-                                <button className='btn-cart'>
+                                
+                                <button onClick={()=>addingCart(product.id)} className='btn-cart'>
                                     <i className='bx bx-cart'></i>
                                 </button>
                             </div>
