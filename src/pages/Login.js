@@ -66,7 +66,7 @@ const Login = () => {
                 </form>
                 <div className="logout-and-creat-container">
                     <p>Do not have an account? <span onClick={signUp}>Sign up</span></p>
-                    <i onClick={logout} class='bx bx-log-out-circle'></i>
+                    <i onClick={logout} className='bx bx-log-out-circle'></i>
                 </div>
             </div>
 
